@@ -1,0 +1,341 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14.03.2015, 14:26:53
+    Author     : Adrian
+*/
+.login_body {
+    background: url(https://dl.dropboxusercontent.com/u/23299152/Wallpapers/wallpaper-22705.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+.login-card {
+  padding: 40px;
+  width: 274px;
+  background-color: #F7F7F7;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.login-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.login-card input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.login-card input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #504257;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #392f3e;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.login-card a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-card a:hover {
+  opacity: 1;
+}
+
+.login-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+    background-color: #f9ebff;
+    text-align: center;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.top_menu_item {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #f9ebff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.top_menu {
+    background: #3c3141;
+    border-top: 1px #2c2530 solid;
+    padding: 15px 15px 15px 15px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.top_menu a {
+    text-decoration: none;
+    color: #f9ebff;
+}
+
+.top_menu a:link:hover {
+    text-decoration: none;
+    color: #dcc5e6;
+}
+
+.top_menu a:visited:hover {
+    text-decoration: none;
+    color: #dcc5e6;
+}
+
+.top_menu a:visited {
+    text-decoration: none;
+    color: #f9ebff;
+}
+
+.header_image {
+    height: auto; 
+    width: 100%; 
+    margin: 0px 0px 0px 0px;
+    border-top: 1px #2c2530 solid;
+    border-bottom: 1px #504257 solid;
+}
+
+.logout_button {
+    border: 1px #2c2530 solid;
+    outline: 1px #504257 solid;
+    
+    padding: 5px 5px 5px 5px;
+    margin: 0px 0px 0px 0px;
+    height: auto;
+    width: 70px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #f9ebff;
+    background-color: #392f3e;
+}
+
+.logout_div {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #3c3141;
+    text-align: right;
+    border-bottom: 1px solid #504257;
+}
+
+.pf_table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 20px;
+}
+
+.pf_table_row {
+    width: 20%;
+    padding: 5px;
+}
+
+.pf_table_hrow {
+    width: 20%;
+    padding: 5px;
+    color: #f9ebff;
+    border-style: none;
+    background-color: #3c3141;
+    text-align: center;
+}
+
+.pf_table_hrow_right {
+    width: 20%;
+    padding: 5px;
+    color: #f9ebff;
+    background-color: #3c3141;
+    border-top-right-radius: 10px; 
+    text-align: center;   
+}
+
+.pf_table_hrow_left {
+    width: 20%;
+    padding: 5px;
+    color: #f9ebff;
+    background-color: #3c3141;
+    border-top-left-radius: 10px;  
+    text-align: center; 
+}
+
+.page_number {
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #eee0f4;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #3c3141;
+    font-family: sans-serif;
+    text-align: center;
+   
+}
+
+.page_number_list {
+    margin-top: 50px;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.add_button {
+    height: auto;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background: #3c3141;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.add_button p {
+    font-family: sans-serif;
+    color: #eee0f4;
+    height: auto;
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    background: #3c3141;
+}
+
+.add_form {
+    width: 40%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.add_form_param {
+    width: 10%;
+    background-color: #3c3141;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+.add_form_param_top {
+    width: 10%;
+    background-color: #3c3141;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
+    border-top-left-radius: 10px;
+}
+
+.add_form_param_bottom {
+    width: 10%;
+    background-color: #3c3141;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+}
+
+.add_form_value { 
+    padding: 5px;   
+    width: 20%;
+}
+
+
+.submit_button {
+     height: auto;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background: #3c3141;
+    margin-left: 20%;
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: #eee0f4;
+    height: auto;
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    background: #3c3141;
+    margin-top: 20px;
+}
