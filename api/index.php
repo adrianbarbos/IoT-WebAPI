@@ -48,7 +48,7 @@ function storeData($timestamp, $id_lbb, $id_sensor, $tip_sensor, $value_from, $v
     
     if($result) 
     {
-        onError("LBB log stored!");
+        onSuccess("LBB log stored!");
     }
     else
     {         
