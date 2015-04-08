@@ -1,5 +1,5 @@
 <?php
-define('MVD_REG_ID', 'dfjksdjkjk5jksjk45jkj54j43k3k');
+include '../config/config.php';
 
 require_once '../config/connect.php';
 connect();
@@ -19,7 +19,7 @@ if(mysql_num_rows($result) > 0) {
 
 function sendNotification($id_lbb, $id_sensor, $value_to) {
         $gcmRegID    = MVD_REG_ID;
-        $pushMessage = $value_to ;
+        $pushMessage = "".$id_lbb."".$id_sensor."".$value_to."" ;
 	$registatoin_ids = array($gcmRegID);
 	$message = array("message" => $pushMessage);		
         $result = send_push_notification($registatoin_ids, $message);
