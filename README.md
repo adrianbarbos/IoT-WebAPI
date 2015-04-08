@@ -15,3 +15,19 @@ e.g POST SensorID int
 Status Raspuns
 e.g 500	{"Mesaj":"Server indisponibil. Incercati mai tarziu."}
 
+####Api URL
+######- http://yourhost/api/
+
+####Store LBB Data Method
+######Method
+########'METHOD' : 'storeData'
+#####Parameters
+########'API_KEY' : 'cyAa6pnNvAVtSZyNegGT'
+########'TIMESTAMP' : 'YYYY/MM/DD hh:mm:ss'
+########'ID_LBB' : '(int)'
+########
+########
+########
+########
+########
+########
