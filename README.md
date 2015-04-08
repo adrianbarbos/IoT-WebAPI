@@ -19,15 +19,15 @@ e.g 500	{"Mesaj":"Server indisponibil. Incercati mai tarziu."}
 ######- http://yourhost/api/
 
 ####Store LBB Data Method
-######Method
+#####Method
 ########'METHOD' : 'storeData'
 #####Parameters
-########'API_KEY' : 'cyAa6pnNvAVtSZyNegGT'
-########'TIMESTAMP' : 'YYYY/MM/DD hh:mm:ss'
-########'ID_LBB' : '(int)'
-########
-########
-########
-########
-########
-########
+######'API_KEY' : 'cyAa6pnNvAVtSZyNegGT'
+######'TIMESTAMP' : 'YYYY/MM/DD hh:mm:ss'
+######'ID_LBB' : '(int)'
+######'ID_SENZOR' : '(int)'
+######'TIP_SENZOR' : '(string)'
+######'VALUE_FROM' : '(string)'
+######'VALUE_TO' : '(string)'
+######'LAST_MESSAGE' : '(string)'
+######'TIMESTAMP_SENT' : 'YYYY/MM/DD hh:mm:ss'
