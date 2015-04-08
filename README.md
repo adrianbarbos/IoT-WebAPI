@@ -41,3 +41,7 @@ e.g 500	{"Mesaj":"Server indisponibil. Incercati mai tarziu."}
 {'status':0, 'message':'Wrong method or api key!'}
 ######ERROR: One or more parameters are not sent
 {'status':0, 'message':'Invalid method parameters!'}
+######ERROR: LBB data not stored
+{'status':0, 'message':'Error! LBB log not stored!'}
+######SUCCESS: LBB data was stored
+{'status':1, 'message':'LBB log stored!'}
