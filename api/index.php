@@ -29,22 +29,21 @@ function checkPostValues() {
         $value_from = $_POST['VALUE_FROM'];
         $value_to = $_POST['VALUE_TO'];
         $last_message = $_POST['LAST_MESSAGE'];
-        $timestamp_sent = $_POST['TIMESTAMP_SENT'];
-        storeData($timestamp, $id_lbb, $id_sensor, $tip_sensor, $value_from, $value_to, $last_message, $timestamp_sent);
+        storeData($timestamp, $id_lbb, $id_sensor, $tip_sensor, $value_from, $value_to, $last_message);
     } else {
         onError("Invalid method parameters!");
     }
 }
 
 
-function storeData($timestamp, $id_lbb, $id_sensor, $tip_sensor, $value_from, $value_to, $last_message, $timestamp_sent) {
+function storeData($timestamp, $id_lbb, $id_sensor, $tip_sensor, $value_from, $value_to, $last_message) {
     
     require_once '../config/connect.php';
     connect();
     
     $result = mysql_query(""
             . "INSERT INTO lbb_logs(TIMESTAMP, ID_LBB, ID_SENZOR, TIP_SENZOR, VALUE_FROM, VALUE_TO, LAST_MESSAGE, TIMESTAMP_SENT) "
-            . "VALUES('$timestamp', '$id_lbb', '$id_sensor', '$tip_sensor', '$value_from', '$value_to', '$last_message', '$timestamp_sent' )"
+            . "VALUES('$timestamp', '$id_lbb', '$id_sensor', '$tip_sensor', '$value_from', '$value_to', '$last_message', NOW() )"
             . "");
     
     if($result) 
@@ -97,7 +96,6 @@ function parametersAreSent() {
         && isset($_POST['VALUE_FROM']) 
         && isset($_POST['VALUE_TO']) 
         && isset($_POST['LAST_MESSAGE']) 
-        && isset($_POST['TIMESTAMP_SENT'])
         ) 
     {
         return TRUE;
