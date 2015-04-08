@@ -10,14 +10,14 @@
 
 ####Parameters
 ######'API_KEY' : 'cyAa6pnNvAVtSZyNegGT'
-######'TIMESTAMP' : 'YYYY/MM/DD hh:mm:ss'
+######'TIMESTAMP' : 'YYYY-MM-DD hh:mm:ss'
 ######'ID_LBB' : '(int)'
 ######'ID_SENZOR' : '(int)'
 ######'TIP_SENZOR' : '(string)'
 ######'VALUE_FROM' : '(string)'
 ######'VALUE_TO' : '(string)'
 ######'LAST_MESSAGE' : '(string)'
-######'TIMESTAMP_SENT' : 'YYYY/MM/DD hh:mm:ss'
+######'TIMESTAMP_SENT' : 'YYYY-MM-DD hh:mm:ss'
 
 ####Response
 ######ERROR: API method not sent
