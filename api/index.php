@@ -133,16 +133,19 @@ if(checkProfileIdGetReq() && checkProfileIdGetSecurity()) {
     
 }  
 function sendMQTT($rfid) {
-    require("./mqtt/phpMQTT.php");
-
-	
-$mqtt = new phpMQTT("messaging.internetofthings.ibmcloud.com",1883, "Trencadis"); //Change client name to something unique
-
-if ($mqtt->connect(TRUE, NULL, "", "")) {
-	$mqtt->publish("Trencadis","Acces card id : ".$rfid." ".date("r"),1);
-	$mqtt->close();
-}
-}
+    
+    $ch = curl_init("http://profile-webapi.mybluemix.net/publish.php?message={%22message%22:%22message%22}");
+    curl_exec($ch);
+//    require("./mqtt/phpMQTT.php");
+//
+//	
+//    $mqtt = new phpMQTT("messaging.internetofthings.ibmcloud.com",1883, "Trencadis"); //Change client name to something unique
+//
+//    if ($mqtt->connect(TRUE, NULL, "", "")) {
+//            $mqtt->publish("Trencadis","Acces card id : ".$rfid." ".date("r"),1);
+//            $mqtt->close();
+//    }
+  }
     
     
 function addLbbSensorsToProfile($rfid_id) {

@@ -6,7 +6,7 @@ $app_id = "a:lsmsll:Trencadis";
 
 echo "bla";
 	
-$mqtt = new phpMQTT("lsmsll.messaging.internetofthings.ibmcloud.com",1883, $app_id); //Change client name to something unique
+$mqtt = new phpMQTT("10.20.4.60",3128, $app_id); //Change client name to something unique
 
 echo "bla2";
 
