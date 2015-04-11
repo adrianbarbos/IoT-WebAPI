@@ -103,3 +103,112 @@ function parametersAreSent() {
         return FALSE;
     }
 }
+
+//Profile api
+//-----------------------------------------------------------------------
+
+if(checkProfileIdGetReq() && checkProfileIdGetSecurity()) {
+    
+    $rfid_id = $_GET['rfid_id'];
+    
+    sendMQTT($rfid_id);
+    
+    require_once '../config/connect.php';
+    connect();
+    
+    $insert_profile = mysql_query("INSERT INTO profile(rfid_id, timestamp) VALUES('$rfid_id', NOW())");
+    
+    if($insert_profile) {
+        echo 'reusit';
+        echo '<bt/>';
+        echo '';
+        
+        addLbbSensorsToProfile($rfid_id);
+    } else {
+        $update = mysql_query("UPDATE profile SET timestamp = NOW() WHERE rfid_id = '$rfid_id'");
+        if($update){
+            addLbbSensorsToProfile($rfid_id);
+        }
+    }
+    
+}  
+function sendMQTT($rfid) {
+    require("./mqtt/phpMQTT.php");
+
+	
+$mqtt = new phpMQTT("messaging.internetofthings.ibmcloud.com",1883, "Trencadis"); //Change client name to something unique
+
+if ($mqtt->connect(TRUE, NULL, "", "")) {
+	$mqtt->publish("Trencadis","Acces card id : ".$rfid." ".date("r"),1);
+	$mqtt->close();
+}
+}
+    
+    
+function addLbbSensorsToProfile($rfid_id) {
+    
+    
+    
+
+    require_once '../config/connect.php';
+    connect();
+    
+    
+    //INSERT INTO lbb_logs(TIMESTAMP, ID_LBB, ID_SENZOR, TIP_SENZOR, VALUE_FROM, VALUE_TO, LAST_MESSAGE, TIMESTAMP_SENT
+    $deleteAll = mysql_query("DELETE FROM profile_settings WHERE profile_id = '$rfid_id'");
+    
+    echo $rfid_id;
+    
+    $array = array(
+        array('2', '1', 'R', ''),
+        array('2', '2', 'RW', ''),
+        array('2', '3', 'RW', ''),
+        array('2', '4', 'RW', ''),
+        array('3', '1', 'R', ''),
+        array('3', '2', 'RW', ''),
+        array('3', '3', 'RW', ''),
+        array('3', '4', 'RW', ''),
+        array('4', '1', 'R', ''),
+        array('4', '2', 'RW', ''),
+        array('4', '3', 'RW', ''),
+        array('4', '4', 'RW', ''),
+    );
+        
+    for($i = 0; $i < count($array) ; $i++) {
+        
+        $array1 = $array[$i];
+        
+        $query = mysql_query(""
+            . "INSERT INTO profile_settings(profile_id, ID_LBB, ID_SENZOR, TIP_SENZOR, VALUE_TO, TIMESTAMP_SENT) "
+            . "VALUES('$rfid_id', '$array1[0]', '$array1[1]', '$array1[2]', '$array1[3]', NOW() )"
+            . "");
+        
+        if($query){
+            echo 'a mers';
+        } else {
+            echo mysql_errno();
+            echo mysql_error();
+        }
+        
+    }
+
+
+    
+}
+
+function checkProfileIdGetReq() {
+    if (isset($_GET['rfid_id']) && isset($_GET[API_METHOD_KEY]) && isset($_GET[API_KEY])) {
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+function checkProfileIdGetSecurity() {
+    
+    if ($_GET[API_METHOD_KEY] = API_METHOD_VALUE && $_GET[API_KEY] = API_SECRET) {
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
